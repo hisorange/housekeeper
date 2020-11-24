@@ -1,0 +1,42 @@
+{
+  "name": "@hisorange/housekeeper",
+  "description": "Simple script to backup your cloud git repositories into GDrive with monitoring",
+  "version": "1.0.0",
+  "main": "run.js",
+  "bin": {
+    "housekeeper": "run.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisorange/housekeeper.git"
+  },
+  "keywords": [
+    "backup",
+    "git",
+    "google drive",
+    "paranoia",
+    "redundancy"
+  ],
+  "author": "Varga Zsolt <hello@hisorange.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hisorange/housekeeper/issues"
+  },
+  "homepage": "https://hisorange.me",
+  "dependencies": {
+    "@gitbeaker/node": "^25.3.0",
+    "@octokit/rest": "^18.0.9",
+    "bitbucket": "^2.4.2",
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "google-drive-connect": "^1.1.2",
+    "md5-file": "^5.0.0",
+    "simple-git": "^2.23.0",
+    "slack": "^11.0.2",
+    "walkdir": "^0.4.1",
+    "zip-a-folder": "^0.0.12"
+  }
+}
