@@ -6,6 +6,9 @@
   "bin": {
     "housekeeper": "run.js"
   },
+  "scripts": {
+    "start": "node run.js"
+  },
   "publishConfig": {
     "access": "public"
   },
