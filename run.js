@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const downloadGitLabRepositories = require('./commands/gitlab');
 const downloadGitHubRepositories = require('./commands/github');
 const downloadBitBucketRepositories = require('./commands/bitbucket');
@@ -5,6 +6,7 @@ const compressDownloads = require('./commands/zip');
 const { join } = require('path');
 const uploadBackups = require('./commands/gdrive');
 const notifySlack = require('./commands/notify');
+const { mkdirSync } = require('fs');
 
 async function main() {
   require('dotenv').config();
@@ -27,6 +29,9 @@ async function main() {
 
   const downloadsDirectory = join(__dirname, '.downloads');
   const backupsDirectory = join(__dirname, '.backups');
+
+  mkdirSync(downloadsDirectory, { recursive: true });
+  mkdirSync(backupsDirectory, { recursive: true });
 
   if (GITLAB_ACCES_TOKEN) {
     await downloadGitLabRepositories(downloadsDirectory, GITLAB_ACCES_TOKEN);
