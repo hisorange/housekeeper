@@ -1,7 +1,7 @@
 {
   "name": "@hisorange/housekeeper",
   "description": "Simple script to backup your cloud git repositories into GDrive with monitoring",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "run.js",
   "bin": {
     "housekeeper": "run.js"
